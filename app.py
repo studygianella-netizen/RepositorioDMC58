@@ -26,13 +26,20 @@ elif sesion == "Sesión 2":
 
 
 elif sesion == "Sesión 3":
-  st.write("Bienvenido la sesión 3")
-  
-  fin_rango = st.slider("Selecione un valor",min_value = 0 , max_value=20, value =7 )
+    import numpy as np
 
-  arreglo = np.arange(0 , fin_rango)
+    st.write("Bienvenido la sesión 3")
 
-  st.write(arreglo)
+    fin_rango = st.slider(
+        "Seleccione un valor",
+        min_value=0,
+        max_value=20,
+        value=7
+    )
+
+    arreglo = np.arange(0, fin_rango)
+
+    st.write(arreglo)
 
 else:
   st.write("Bienvenido la sesión 4")
