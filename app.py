@@ -44,8 +44,8 @@ else:
   st.write("Bienvenido la sesión 4")
   principal=st.number_input("Ingrese el monto del prestado", value=1000)
   tasa_anual=st.number_input("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
-  años=st.number_input("Ingrese el npumero de años del préstamo", value=1)
-  pagos_año==st.number_input("Ingrese la cantidad de pagos por año", value=12)
+  anos=st.number_input("Ingrese el npumero de años del préstamo", value=1)
+  pagos_anio = st.number_input("Ingrese la cantidad de pagos por año", value=12)
 
   cuota = lf.cuota_prestamo(principal,tasa_anual,años,pagos_año)
   st.write(f"El valor de la cuota es {cuota}")
