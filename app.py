@@ -1,5 +1,5 @@
 import streamlit as st
- import numpy as np
+
 st.title("Mi primera aplicación en python")
 
 st.sidebar.title("Parámetros")
@@ -26,7 +26,7 @@ elif sesion == "Sesión 2":
 
 
 elif sesion == "Sesión 3":
-   
+    import numpy as np
     st.write("Bienvenido la sesión 3")
 
     fin_rango = st.slider(
