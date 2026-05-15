@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 import libreria_funciones as lf
 st.title("Mi primera aplicación en python")
 
@@ -26,7 +27,7 @@ elif sesion == "Sesión 2":
 
 
 elif sesion == "Sesión 3":
-    import numpy as np
+
     st.write("Bienvenido la sesión 3")
 
     fin_rango = st.slider(
