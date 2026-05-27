@@ -43,6 +43,7 @@ elif sesion == "Sesión 3":
     st.write(arreglo)
 
 elif: sesion == "Sesión 4":
+  
    st.write("Bienvenido a la sesión 4")
    principal = st.number_input("Ingrese el monto del préstamo", value=1000)
    tasa_anual = st.number_input("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
