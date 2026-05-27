@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import libreria_funciones as lf
+import pandas as pd
 st.title("Mi primera aplicación en python")
 
 st.sidebar.title("Parámetros")
@@ -9,7 +10,7 @@ st.write("Elaborado por: Gianella Z")
 
 st.sidebar.image("Image20260512194119.png")
 
-sesion = st.sidebar.selectbox("Seleccione una sesión", ["Sesión 1","Sesión 2","Sesión 3","Sesión 4"] )
+sesion = st.sidebar.selectbox("Seleccione una sesión", ["Sesión 1","Sesión 2","Sesión 3","Sesión 4","Sesión 5] )
 
 if sesion == "Sesión 1":
   st.write("Bienvenido la sesión 1")
@@ -41,7 +42,7 @@ elif sesion == "Sesión 3":
 
     st.write(arreglo)
 
-else:
+else: sesion == "Sesión 4":
    st.write("Bienvenido a la sesión 4")
    principal = st.number_input("Ingrese el monto del préstamo", value=1000)
    tasa_anual = st.number_input("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
@@ -50,3 +51,14 @@ else:
     
    cuota = round(lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anio),2)
    st.write(f"El valor de la cuota es {cuota}")
+
+else:
+   st.write("Bienvenido a la sesión 5")
+  archivo = st.siderbar.file.uploader("Cargue su archivo")
+  if archivo is not None: 
+    if archivo.name.endswith(.cvs):
+      datos = pd.red_cvs(archivo)
+    elif archivo.name.endswhite(.xlsx):
+      datos=pd.read_excel (archivo)
+    st.write (datos)
+          
