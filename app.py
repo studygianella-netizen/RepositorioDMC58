@@ -42,7 +42,7 @@ elif sesion == "Sesión 3":
 
     st.write(arreglo)
 
-else: sesion == "Sesión 4":
+elif: sesion == "Sesión 4":
    st.write("Bienvenido a la sesión 4")
    principal = st.number_input("Ingrese el monto del préstamo", value=1000)
    tasa_anual = st.number_input("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
@@ -53,12 +53,18 @@ else: sesion == "Sesión 4":
    st.write(f"El valor de la cuota es {cuota}")
 
 else:
-   st.write("Bienvenido a la sesión 5")
-  archivo = st.siderbar.file.uploader("Cargue su archivo")
-  if archivo is not None: 
-    if archivo.name.endswith(.cvs):
-      datos = pd.red_cvs(archivo)
-    elif archivo.name.endswhite(.xlsx):
-      datos=pd.read_excel (archivo)
-    st.write (datos)
+  st.write("Bienvenido a la sesión 5")
+  archivo = st.sidebar.file_uploader("Cargue su archivo")
+  
+  if archivo is not None:
+    
+    if archivo.name.endswith(".csv"):
+      datos = pd.read_csv(archivo)
+    elif archivo.name.endswith(".xlsx"):
+      datos = pd.read_excel(archivo)
+
+    st.write(datos)
+
+  else: 
+    st.write("Cargue el archivo ")
           
