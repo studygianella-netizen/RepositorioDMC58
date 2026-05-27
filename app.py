@@ -10,7 +10,7 @@ st.write("Elaborado por: Gianella Z")
 
 st.sidebar.image("Image20260512194119.png")
 
-sesion = st.sidebar.selectbox("Seleccione una sesión", ["Sesión 1","Sesión 2","Sesión 3","Sesión 4","Sesión 5] )
+sesion = st.sidebar.selectbox("Seleccione una sesión", ["Sesión 1","Sesión 2","Sesión 3","Sesión 4","Sesión 5"] )
 
 if sesion == "Sesión 1":
   st.write("Bienvenido la sesión 1")
